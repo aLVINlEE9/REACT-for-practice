@@ -26,10 +26,17 @@ class NotificationList extends React.Component {
 			notifications: [],
 		};
 	}
-
+	componentDidUpdate(){
+		console.log(
+			"list update"
+		);
+	}
 	componentDidMount() {
 		const { notifications } = this.state;
+		
+		console.log("list did mount");
 		timer = setInterval(() => {
+			console.log(notifications.length, reservedNotifications.length)
 			if (notifications.length < reservedNotifications.length) {
 				const index = notifications.length;
 				notifications.push(reservedNotifications[index]);
@@ -40,12 +47,20 @@ class NotificationList extends React.Component {
 				this.setState({
 					notifications: [],
 				});
+				console.log(notifications[0]);
 				clearInterval(timer);
 			}
 		}, 1000);
 	}
 
+	componentWillUnmount(){
+		console.log("list will unmount")
+	}
+
+
+
 	render() {
+		console.log("rendering");
 		return (
 			<div>
 				{this.state.notifications.map((notification) => {

@@ -8,13 +8,15 @@ import CommentList from './chapter_05/CommentList';
 import Library from './chapter_03/Library';
 import Accommodate from './chapter_07/Accommodate';
 import NotificationList from './chapter_06/NotificationList';
+import SignUp from './chapter_11/SignUp';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(
-  <>
-    <NotificationList />
-  </>
+  <React.StrictMode>
+    <SignUp />
+  </React.StrictMode>
 );
 
 

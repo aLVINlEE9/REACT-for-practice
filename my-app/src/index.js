@@ -10,13 +10,15 @@ import Accommodate from './chapter_07/Accommodate';
 import NotificationList from './chapter_06/NotificationList';
 import SignUp from './chapter_11/SignUp';
 import Calculater from './chapter_12/Calculator';
+import ProfileCard from './chapter_13/ProfileCard';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(
   <React.StrictMode>
-    <Calculater />
+    <ProfileCard />
   </React.StrictMode>
 );
 

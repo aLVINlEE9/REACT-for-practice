@@ -14,13 +14,19 @@ function Accommodate(props) {
 	// 	console.log("useEffect() is called.");
 	// 	console.log(`isFull: ${isFull}`);
 	// });
-	useEffect(() => {
-		setIsFull(count >= MAX_CAPACITY);
-		console.log(`Current count value: ${count}`);
-	}, [count]);
+	// useEffect(() => {
+	// 	setIsFull(count >= MAX_CAPACITY);
+	// 	console.log(`Current count value: ${count}`);
+	// }, [count]);
 	
 	return (
 		<div style={{ padding : 16 }}>
+			<p>
+				{useEffect(() => {
+					setIsFull(count >= MAX_CAPACITY);
+					console.log(`Current count value: ${count}`);
+					}, [count])}
+			</p>
 			<p>{`총 ${count}명 수용했습니다.`}</p>
 			
 			<button onClick={increaseCount} disabled={isFull}>

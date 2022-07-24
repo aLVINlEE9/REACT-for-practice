@@ -12,17 +12,16 @@ import SignUp from './chapter_11/SignUp';
 import Calculater from './chapter_12/Calculator';
 import ProfileCard from './chapter_13/ProfileCard';
 import DarkOrLight from './chapter_14/DarkOrLight';
-
+import Practice from './practice/Practice';
+import Block from './chapter_15/Blocks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
 root.render(
   <React.StrictMode>
-    <DarkOrLight />
+    <Block />
   </React.StrictMode>
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
